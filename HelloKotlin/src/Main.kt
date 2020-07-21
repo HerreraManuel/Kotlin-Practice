@@ -1,3 +1,6 @@
+var firstName: String = "Mike"
+val lastName: String = "Smith"
+
 fun main() {
     println("Hello Kotlin")
 
@@ -10,5 +13,15 @@ fun main() {
     println(nickname)
     nickname = "Manuel"
     println(nickname)
+
+    // Using global variables
+    println(firstName)
+    println(lastName)
+
+    // nullable variable
+    var fish : String? = "goldfish"
+    println(fish)
+    fish = null
+    println(fish)
 
 }
