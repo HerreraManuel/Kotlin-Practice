@@ -100,7 +100,12 @@ fun main() {
     greetPerson(name = "Nate")
 
     //using classses
-    val person = Person("John", "Smith")
+    val person = Person()
+    // person.lastName
+    // person.firstName
+    // println(person.nickName)
+
+    person.printInfo()
 }
 
 // Basic Kotlin Function
