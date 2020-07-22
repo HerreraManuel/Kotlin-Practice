@@ -52,6 +52,16 @@ fun main() {
     sayHello()
     newHello("Kotlin")
     newHelloGreeting("Hi", "Kotlin")
+
+    //Arrays
+    val interestingThings = arrayOf("Kotlin", "Programming", "Comic Books")
+    println(interestingThings.size)
+    println(interestingThings[0])
+    println(interestingThings.get(0))
+
+    for(interestingThing in interestingThings) {
+        println(interestingThing)
+    }
 }
 
 // Basic Kotlin Function
