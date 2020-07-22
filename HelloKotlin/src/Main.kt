@@ -62,6 +62,27 @@ fun main() {
     for(interestingThing in interestingThings) {
         println(interestingThing)
     }
+
+    // functional approach
+    // renamed value passed to the lambda
+    interestingThings.forEach{ interestingThing ->
+        println(interestingThing)
+    }
+
+    interestingThings.forEachIndexed{index, interestingThing->
+        println("$interestingThing is at index $index")
+    }
+
+    // using lists
+    val moreInterestingThings = listOf("Kotlin", "Programming", "Linux")
+    println(moreInterestingThings.size)
+    println(moreInterestingThings.get(0))
+    moreInterestingThings.forEach { anInterestingThing ->
+        println(anInterestingThing)
+    }
+    moreInterestingThings.forEachIndexed{index, anInterestingThing ->
+        println("$anInterestingThing is at index $index")
+    }
 }
 
 // Basic Kotlin Function
