@@ -46,4 +46,32 @@ fun main() {
     greeting = null
     val greetingToPrint = if(greeting != null) greeting else "Hi"
     println(greetingToPrint)
+
+    // Calling the basic kotlin function
+    println(getGreeting())
+    sayHello()
+    newHello("Kotlin")
+    newHelloGreeting("Hi", "Kotlin")
 }
+
+// Basic Kotlin Function
+fun getGreeting(): String {
+    return "Hello Kotlin"
+}
+
+// single expression
+fun newGreeting() = "Hello world"
+
+fun sayHello(): Unit {
+    println(newGreeting())
+}
+/*
+fun newHello(itemToGreet:String){
+    // val msg = "Hello $itemToGreet"
+    // println(msg)
+}
+ */
+
+fun newHello(itemToGreet:String) = println("Morning $itemToGreet")
+
+fun newHelloGreeting( greeting:String, itemToGreet:String) = println("$greeting, $itemToGreet")
