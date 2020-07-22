@@ -100,7 +100,7 @@ fun main() {
     greetPerson(name = "Nate")
 
     //using classses
-    val person = Person()
+    val person = Person("John", "Smith")
 }
 
 // Basic Kotlin Function
