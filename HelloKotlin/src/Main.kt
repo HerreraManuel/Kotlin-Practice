@@ -95,6 +95,18 @@ fun main() {
     val boringThings = mutableListOf("Games", "Cats", "Cars")
     boringThings.add("Planes")
     boringThings.forEach{ println(it) }
+
+    // passing lists to func
+    newGreetings("Hello", moreInterestingThings)
+
+    // vararg
+    val mediocreThings = arrayOf("Plants", "Rugs", "Buildings")
+    sayBye("Goodbye", "Kotlin", "Programming", "Comic Books")
+    sayBye("Goodbye", *mediocreThings)
+
+    // named arguments
+    greetPerson(name = "Nate", greeting = "Hi")
+    greetPerson(name = "Nate")
 }
 
 // Basic Kotlin Function
@@ -118,3 +130,18 @@ fun newHello(itemToGreet:String){
 fun newHello(itemToGreet:String) = println("Morning $itemToGreet")
 
 fun newHelloGreeting( greeting:String, itemToGreet:String) = println("$greeting, $itemToGreet")
+
+fun newGreetings(greeting:String, itemsToGreet:List<String>){
+   itemsToGreet.forEach{itemsToGreet ->
+       println("$greeting, $itemsToGreet")
+   }
+}
+
+// vararg
+fun sayBye(greeting:String, vararg itemsToLeave:String){
+    itemsToLeave.forEach {itemToLeave ->
+        println("$greeting, $itemToLeave")
+    }
+}
+
+fun greetPerson(greeting:String = "Goodbye", name:String) = println("$greeting, $name")
