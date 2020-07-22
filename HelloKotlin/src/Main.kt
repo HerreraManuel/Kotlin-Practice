@@ -83,6 +83,18 @@ fun main() {
     moreInterestingThings.forEachIndexed{index, anInterestingThing ->
         println("$anInterestingThing is at index $index")
     }
+    moreInterestingThings.forEachIndexed{index, anInterestingThing ->
+        println("$anInterestingThing is at index $index")
+    }
+
+    // maps
+    val map = mapOf(1 to "a", 2 to "b", 3 to "c")
+    map.forEach{key, value -> println("$key -> $value") }
+
+    // mutable list
+    val boringThings = mutableListOf("Games", "Cats", "Cars")
+    boringThings.add("Planes")
+    boringThings.forEach{ println(it) }
 }
 
 // Basic Kotlin Function
