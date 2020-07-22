@@ -1,5 +1,4 @@
 var firstName: String = "Mike"
-val lastName: String = "Smith"
 
 fun main() {
     println("Hello Kotlin")
@@ -16,7 +15,6 @@ fun main() {
 
     // Using global variables
     println(firstName)
-    println(lastName)
 
     // nullable variable
     var fish : String? = "goldfish"
@@ -32,11 +30,6 @@ fun main() {
 
     // Basic Flow Control
     greeting = null
-    if(greeting != null){
-        println("Hi")
-    } else{
-        println("This has become a null")
-    }
     greeting = "Hello"
     when (greeting) {
         null -> println("This is still a null")
@@ -44,8 +37,6 @@ fun main() {
     }
 
     greeting = null
-    val greetingToPrint = if(greeting != null) greeting else "Hi"
-    println(greetingToPrint)
 
     // Calling the basic kotlin function
     println(getGreeting())
@@ -89,7 +80,7 @@ fun main() {
 
     // maps
     val map = mapOf(1 to "a", 2 to "b", 3 to "c")
-    map.forEach{key, value -> println("$key -> $value") }
+    map.forEach{ (key, value) -> println("$key -> $value") }
 
     // mutable list
     val boringThings = mutableListOf("Games", "Cats", "Cars")
@@ -107,6 +98,9 @@ fun main() {
     // named arguments
     greetPerson(name = "Nate", greeting = "Hi")
     greetPerson(name = "Nate")
+
+    //using classses
+    val person = Person()
 }
 
 // Basic Kotlin Function
@@ -132,8 +126,8 @@ fun newHello(itemToGreet:String) = println("Morning $itemToGreet")
 fun newHelloGreeting( greeting:String, itemToGreet:String) = println("$greeting, $itemToGreet")
 
 fun newGreetings(greeting:String, itemsToGreet:List<String>){
-   itemsToGreet.forEach{itemsToGreet ->
-       println("$greeting, $itemsToGreet")
+   itemsToGreet.forEach{itemToGreet ->
+       println("$greeting, $itemToGreet")
    }
 }
 
